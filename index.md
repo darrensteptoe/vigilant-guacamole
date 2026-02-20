@@ -3,7 +3,7 @@ layout: home
 title: "Darren Steptoe"
 description: "Personal website and directory for Darren Steptoe."
 permalink: /
-nav_exclude: false
+nav_exclude: true
 body_class: page-index
 ---
 
