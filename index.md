@@ -21,7 +21,7 @@ description: "Strategy • Systems • Story"
       {% include card.html class="card--8" eyebrow="Search" title="Find pages fast" content=search %}
 
       {% capture photo %}
-      {% include media.html class="media--square" src="/assets/img/scoreboard.jpeg" alt="Photo placeholder" %}
+      {% include media.html class="media--square" src="/assets/img/EA15915B-E56C-4FB3-B89B-085E5E740523.png" alt="Photo placeholder" %}
       {% endcapture %}
       {% include card.html class="card--4" eyebrow="Photo" title=" " content=photo %}
 
