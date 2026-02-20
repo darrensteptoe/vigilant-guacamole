@@ -9,7 +9,7 @@ permalink: /services/
     <div class="grid">
 
       {% capture media %}
-      <p class="cardText">I provide end-to-end media production services for individuals, organizations, campaigns, and institutions.</p>
+<p class="cardText">I provide end-to-end media production services for individuals, organizations, campaigns, and institutions.</p>
       <ul class="list">
         <li>Documentary filmmaking (development, production, post)</li>
         <li>Video production and editing (short-form, long-form)</li>
@@ -18,29 +18,10 @@ permalink: /services/
         <li>Post-production workflows, color, and delivery</li>
       </ul>
       {% endcapture %}
-      {% include card.html class="card--12" eyebrow="Media" title="Media production services" content=media %}
+      {% include card.html class="card--12" icon="i-media" eyebrow="Media" title="Media production services" content=media %}
 
-      {% capture vid %}
-      {% include embed.html src="https://www.youtube.com/embed/ycHys4e6s3Q" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" %}
-      {% endcapture %}
-      {% include card.html class="card--12" eyebrow="Video" title="Sample work" content=vid %}
-
-      {% capture consult %}
-      <p class="cardText">I support campaigns, committees, and independent candidates with practical, field-tested strategy. If you need a clean plan, strong execution, and someone who can build the infrastructure and train the team, I can help.</p>
-      <ul class="list">
-        <li>Win number + targeting (what it takes to win, who to talk to, and how often)</li>
-        <li>Field plan (persuasion → GOTV), universes, turf cutting, and staging locations</li>
-        <li>Volunteer &amp; staff training (canvass, phones, data entry, packet build)</li>
-        <li>Scripts and message discipline (doors, phones, texts, digital)</li>
-        <li>GOTV operations (chase, visibility, poll coverage planning)</li>
-        <li>Basic comms support (social content guidance, rapid response structure)</li>
-        <li>Office systems (weekly goals, pipeline, reporting, and accountability)</li>
-      </ul>
-      {% endcapture %}
-      {% include card.html class="card--12" eyebrow="Consulting" title="Political consulting" content=consult %}
-
-      {% capture pricing %}
-      <div class="pricingSection">
+      {% capture media_pricing %}
+<div class="pricingSection">
         <div class="subhead">Wedding Films</div>
         <div class="grid grid--tight pricingGrid">
           {% include card.html class="card--6" title="Bronze — $2,400" text="Up to 6 hours · 5–7 min highlight film · 14-day turnaround" %}
@@ -51,7 +32,7 @@ permalink: /services/
         </div>
       </div>
 
-      <div class="pricingSection">
+<div class="pricingSection">
         <div class="subhead">Event &amp; Promotional</div>
         <div class="grid grid--tight pricingGrid">
           {% include card.html class="card--6" title="Half Day — $600" text="Up to 4 hours · 60–90 sec highlight" %}
@@ -59,7 +40,7 @@ permalink: /services/
         </div>
       </div>
 
-      <div class="pricingSection">
+<div class="pricingSection">
         <div class="subhead">Corporate &amp; Small Business</div>
         <div class="grid grid--tight pricingGrid">
           {% include card.html class="card--6" title="Brand Promo — $1,200" text="Interview + b-roll · 2–3 min film · Social cut" %}
@@ -69,7 +50,7 @@ permalink: /services/
         </div>
       </div>
 
-      <div class="pricingSection">
+<div class="pricingSection">
         <div class="subhead">Documentary &amp; Editing</div>
         <div class="grid grid--tight pricingGrid">
           {% include card.html class="card--6" title="Editing — $85/hr" text="5-hour minimum per project phase" %}
@@ -77,7 +58,31 @@ permalink: /services/
         </div>
       </div>
 
-      <div class="pricingSection">
+<p class="cardText mt-16">Directional estimate only. Final pricing depends on scope, travel, deliverables, and timeline.</p>
+      {% endcapture %}
+      {% include card.html class="card--12" icon="i-card" eyebrow="Media Pricing" title="Media pricing" content=media_pricing %}
+
+      {% capture youtube %}
+{% include embed.html src="https://www.youtube.com/embed/ycHys4e6s3Q" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" %}
+      {% endcapture %}
+      {% include card.html class="card--12" icon="i-play" eyebrow="YouTube" title="YouTube" content=youtube %}
+
+      {% capture consult %}
+<p class="cardText">I support campaigns, committees, and independent candidates with practical, field-tested strategy. If you need a clean plan, strong execution, and someone who can build the infrastructure and train the team, I can help.</p>
+      <ul class="list">
+        <li>Win number + targeting (what it takes to win, who to talk to, and how often)</li>
+        <li>Field plan (persuasion → GOTV), universes, turf cutting, and staging locations</li>
+        <li>Volunteer &amp; staff training (canvass, phones, data entry, packet build)</li>
+        <li>Scripts and message discipline (doors, phones, texts, digital)</li>
+        <li>GOTV operations (chase, visibility, poll coverage planning)</li>
+        <li>Basic comms support (social content guidance, rapid response structure)</li>
+        <li>Office systems (weekly goals, pipeline, reporting, and accountability)</li>
+      </ul>
+      {% endcapture %}
+      {% include card.html class="card--12" icon="i-ballot" eyebrow="Consulting" title="Political consulting" content=consult %}
+
+      {% capture consulting_pricing %}
+<div class="pricingSection">
         <div class="subhead">Political Consulting</div>
         <div class="grid grid--tight pricingGrid">
           {% include card.html class="card--6" title="Strategy Intensive (1 Hour) — $250" text="Win number, targeting, field plan, next steps" %}
@@ -87,12 +92,12 @@ permalink: /services/
         </div>
       </div>
 
-      <p class="cardText mt-16">Directional estimate only. Final pricing depends on scope, travel, deliverables, and timeline.</p>
+<p class="cardText mt-16">Directional estimate only. Final pricing depends on scope, travel, deliverables, and timeline.</p>
       {% endcapture %}
-      {% include card.html class="card--12" eyebrow="Pricing" title="Packages and rates" content=pricing %}
+      {% include card.html class="card--12" icon="i-card" eyebrow="Consulting Pricing" title="Consulting pricing" content=consulting_pricing %}
 
       {% capture intake %}
-      <p class="cardText">Use this form to describe what you need. I’ll follow up with next steps and a clear scope.</p>
+<p class="cardText">Use this form to describe what you need. I’ll follow up with next steps and a clear scope.</p>
       <form class="form" action="#" method="POST">
         <div class="formGrid">
           <div class="field">
@@ -145,13 +150,13 @@ permalink: /services/
         </div>
       </form>
       {% endcapture %}
-      {% include card.html class="card--12" eyebrow="Intake" title="Project intake form" content=intake %}
+      {% include card.html class="card--12" icon="i-form" eyebrow="Intake" title="Project intake form" content=intake %}
 
       {% capture payment %}
-      <p class="cardText">For invoices, deposits, or project payments, you can securely pay online using card, Apple Pay, or Google Pay.</p>
+<p class="cardText">For invoices, deposits, or project payments, you can securely pay online using card, Apple Pay, or Google Pay.</p>
       {% include button.html href="#" label="Pay Invoice ↗" %}
       {% endcapture %}
-      {% include card.html class="card--12" eyebrow="Payment" title="Project payments" content=payment %}
+      {% include card.html class="card--12" icon="i-card" eyebrow="Payment" title="Project payments" content=payment %}
 
     </div>
   </div>
