@@ -54,7 +54,7 @@ permalink: /services/
     </div>
     <div class="priceCol">
       <h5 class="priceName">Additional Hour</h5>
-      <p class="priceMeta">Applies beyond the booked package (non-negotiable)</p>
+      <p class="priceMeta">Applies beyond the booked package<br>(non-negotiable)</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$125</p>
     </div>
