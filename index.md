@@ -1,31 +1,27 @@
 ---
 title: Home
-description: "Placeholder homepage built from neutral components. Replace these cards with your real content."
+description: "Strategy • Systems • Story"
 ---
 
 <section class="section">
   <div class="container">
     <div class="grid">
-      {% capture c1 %}
-      <p class="cardText">This is a neutral baseline. You will migrate your old site content into these boxes manually.</p>
+      {% capture about %}
+      <p class="cardText">I’m Darren Steptoe. I build structured, practical work where accuracy matters, from campaign strategy and electoral modeling to media production and long-form research. This site serves as a central hub for my documentaries, books, projects, and ongoing work. If you’re here for professional services, please visit the Services page using the menu above.</p>
       {% endcapture %}
-      {% include card.html class="card--8" eyebrow="Start here" title="Homepage box" content=c1 %}
+      {% include card.html class="card--12" eyebrow="About" title="Darren Steptoe" content=about %}
 
-      {% capture c2 %}
-      <p class="cardText">Use this space for a short bio, a one‑liner, or key links.</p>
+      {% capture links %}
+      <p class="cardText">Start here:</p>
+      <div class="btnRow">
+        {% include button.html href="/services/" label="Services" %}
+        {% include button.html href="/work/" label="Work" variant="ghost" %}
+        {% include button.html href="/projects/" label="Projects" variant="ghost" %}
+        {% include button.html href="/writing/" label="Writing" variant="ghost" %}
+        {% include button.html href="/contact/" label="Contact" variant="ghost" %}
+      </div>
       {% endcapture %}
-      {% include card.html class="card--4" eyebrow="Profile" title="Sidebar box" content=c2 %}
-
-      {% capture c3 %}
-      <p class="cardText">This is a placeholder grid. Swap in real cards as you migrate.</p>
-      {% endcapture %}
-      {% include card.html class="card--6" eyebrow="Placeholder" title="Card A" content=c3 %}
-
-      {% capture c4 %}
-      <p class="cardText">Buttons are links. Images go in a media wrapper. Text goes in a card.</p>
-      {% endcapture %}
-      {% include card.html class="card--6" eyebrow="Rule" title="Card B" content=c4 %}
-
+      {% include card.html class="card--12" eyebrow="Pages" title="Navigation" content=links %}
     </div>
   </div>
 </section>
