@@ -21,131 +21,54 @@ permalink: /services/
       {% include card.html class="card--12" icon="i-media" eyebrow="Media" title="Media production services" content=media %}
 
       {% capture media_pricing %}
-<div class="priceGroup">
-  <div class="priceGroupHead">
-    <h4 class="priceGroupTitle">Wedding Films</h4>
-    <p class="priceGroupHint">All packages include audio capture and color-grade.</p>
+<div class="priceCompare" aria-label="Wedding packages and pricing">
+  <div class="priceCompareGrid">
+    <div class="priceCol">
+      <h5 class="priceName">Select</h5>
+      <p class="priceMeta">4–5 hours of photo/video<br>400+ fully edited photos<br>4+ min highlight film<br>60s teaser</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$2,450</p>
+    </div>
+
+    <div class="priceCol">
+      <h5 class="priceName">Classic</h5>
+      <p class="priceMeta">6 hours of photo/video<br>500+ fully edited photos<br>6+ min highlight film<br>60s teaser</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$2,900</p>
+    </div>
+
+    <div class="priceCol priceCol--featured">
+      <h5 class="priceName">Luxe</h5>
+      <p class="priceMeta">8 hours of photo/video<br>600+ fully edited photos<br>8+ min highlight film<br>60s teaser</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$3,450</p>
+      <p class="priceTag">Most popular</p>
+    </div>
+
+    <div class="priceCol">
+      <h5 class="priceName">Premier</h5>
+      <p class="priceMeta">10 hours of photo/video<br>700+ fully edited photos<br>10+ min highlight film<br>60s teaser</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$4,000</p>
+    </div>
+
+    <div class="priceCol">
+      <h5 class="priceName">The Ivory</h5>
+      <p class="priceMeta">10 hours photo/video<br>Second photographer (10 hrs)<br>900+ fully edited photos<br>10+ min highlight film<br>60s teaser<br>Drone<br>Engagement session</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$4,950</p>
+    </div>
   </div>
-  <div class="priceTiers">
-    <div class="tier">
-      <h5 class="tierName">Bronze</h5>
-      <p class="tierPrice">$2,400</p>
-      <p class="tierMeta">Up to 6 hours · 5–7 min highlight · 14-day turnaround</p>
-      <div class="tierCta">
-        <a class="btn secondary" href="#intake">Request availability</a>
-      </div>
-    </div>
 
-    <div class="tier tier--featured">
-      <div class="tierBadge">Best value</div>
-      <h5 class="tierName">Silver</h5>
-      <p class="tierPrice">$3,200</p>
-      <p class="tierMeta">Up to 8 hours · Full speeches edit · 6–8 min cinematic film</p>
-      <div class="tierCta">
-        <a class="btn" href="#intake">Start intake</a>
-        <a class="btn secondary" href="#payment">Pay deposit</a>
-      </div>
-    </div>
-
-    <div class="tier">
-      <h5 class="tierName">Gold</h5>
-      <p class="tierPrice">$4,200</p>
-      <p class="tierMeta">Up to 10 hours · Multi-cam ceremony · Drone + social teaser</p>
-      <div class="tierCta">
-        <a class="btn secondary" href="#intake">Start intake</a>
-      </div>
-    </div>
-
-    <div class="tier">
-      <h5 class="tierName">Platinum</h5>
-      <p class="tierPrice">$5,200</p>
-      <p class="tierMeta">Up to 12 hours · Specialty cams · 48-hr teaser · 7-day delivery</p>
-      <div class="tierCta">
-        <a class="btn secondary" href="#intake">Start intake</a>
-      </div>
-    </div>
+  <div class="priceCompareNote">
+    All packages include high‑resolution deliverables and a shareable gallery. Travel/tax may apply depending on location.
   </div>
 </div>
 
-<div class="priceGroup">
-  <div class="priceGroupHead">
-    <h4 class="priceGroupTitle">Event &amp; Promotional</h4>
-    <p class="priceGroupHint">Highlights that feel premium but ship fast.</p>
-  </div>
-  <div class="priceTiers">
-    <div class="tier">
-      <h5 class="tierName">Half Day</h5>
-      <p class="tierPrice">$600</p>
-      <p class="tierMeta">Up to 4 hours · 60–90 sec highlight</p>
-      <div class="tierCta"><a class="btn secondary" href="#intake">Start intake</a></div>
-    </div>
-    <div class="tier tier--featured">
-      <div class="tierBadge">Most common</div>
-      <h5 class="tierName">Full Day</h5>
-      <p class="tierPrice">$1,000</p>
-      <p class="tierMeta">Up to 8 hours · 2–3 min highlight</p>
-      <div class="tierCta"><a class="btn" href="#intake">Start intake</a></div>
-    </div>
-  </div>
+<div class="priceSingleCta">
+  <a class="btn" href="#intake">Start intake</a>
+  <a class="btn secondary" href="#payment">Payment</a>
 </div>
-
-<div class="priceGroup">
-  <div class="priceGroupHead">
-    <h4 class="priceGroupTitle">Corporate &amp; Small Business</h4>
-    <p class="priceGroupHint">On-message video that looks expensive.</p>
-  </div>
-  <div class="priceTiers">
-    <div class="tier">
-      <h5 class="tierName">Brand Promo</h5>
-      <p class="tierPrice">$1,200</p>
-      <p class="tierMeta">Interview + b-roll · 2–3 min film · Social cut</p>
-      <div class="tierCta"><a class="btn secondary" href="#intake">Start intake</a></div>
-    </div>
-    <div class="tier">
-      <h5 class="tierName">Executive Interview</h5>
-      <p class="tierPrice">$850</p>
-      <p class="tierMeta">Up to 2 hours · 1–2 min polished edit</p>
-      <div class="tierCta"><a class="btn secondary" href="#intake">Start intake</a></div>
-    </div>
-    <div class="tier tier--featured">
-      <div class="tierBadge">Best for teams</div>
-      <h5 class="tierName">Monthly Content</h5>
-      <p class="tierPrice">from $2,500</p>
-      <p class="tierMeta">1 filming day · 3–5 edited videos</p>
-      <div class="tierCta"><a class="btn" href="#intake">Start intake</a></div>
-    </div>
-    <div class="tier">
-      <h5 class="tierName">Custom Package</h5>
-      <p class="tierPrice">Quote</p>
-      <p class="tierMeta">Multi-day / multi-location / recurring</p>
-      <div class="tierCta"><a class="btn secondary" href="#intake">Start intake</a></div>
-    </div>
-  </div>
-</div>
-
-<div class="priceGroup">
-  <div class="priceGroupHead">
-    <h4 class="priceGroupTitle">Documentary &amp; Editing</h4>
-    <p class="priceGroupHint">Flexible support across phases.</p>
-  </div>
-  <div class="priceTiers">
-    <div class="tier">
-      <h5 class="tierName">Editing</h5>
-      <p class="tierPrice">$85/hr</p>
-      <p class="tierMeta">5-hour minimum per project phase</p>
-      <div class="tierCta"><a class="btn secondary" href="#intake">Start intake</a></div>
-    </div>
-    <div class="tier tier--featured">
-      <div class="tierBadge">Full support</div>
-      <h5 class="tierName">Documentary Support</h5>
-      <p class="tierPrice">Quote</p>
-      <p class="tierMeta">Development → post tailored to scope</p>
-      <div class="tierCta"><a class="btn" href="#intake">Start intake</a></div>
-    </div>
-  </div>
-</div>
-
-<p class="priceNote">Directional estimate only. Final pricing depends on scope, travel, deliverables, and timeline.</p>
 {% endcapture %}
       {% include card.html class="card--12" icon="i-card" eyebrow="Media Pricing" title="Media pricing" content=media_pricing %}
 
@@ -169,50 +92,46 @@ permalink: /services/
       {% include card.html class="card--12" icon="i-ballot" eyebrow="Consulting" title="Political consulting" content=consult %}
 
       {% capture consulting_pricing %}
-<div class="priceGroup">
-  <div class="priceGroupHead">
-    <h4 class="priceGroupTitle">Political Consulting</h4>
-    <p class="priceGroupHint">Scope scales with race size and timeline.</p>
+<div class="priceCompare" aria-label="Consulting retainers and pricing">
+  <div class="priceCompareGrid" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+    <div class="priceCol">
+      <h5 class="priceName">Strategy intensive</h5>
+      <p class="priceMeta">1 hour<br>Win number + targeting<br>Action plan + next steps</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$250</p>
+    </div>
+
+    <div class="priceCol priceCol--featured">
+      <h5 class="priceName">Municipal</h5>
+      <p class="priceMeta">Weekly cadence<br>Plan + training + reporting<br>Adjustments as data comes in</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$3k–6k/mo</p>
+      <p class="priceTag">Best value</p>
+    </div>
+
+    <div class="priceCol">
+      <h5 class="priceName">State legislative</h5>
+      <p class="priceMeta">Ops buildout<br>Weekly goals<br>GOTV execution support</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$5k–10k/mo</p>
+    </div>
+
+    <div class="priceCol">
+      <h5 class="priceName">Congressional</h5>
+      <p class="priceMeta">Full-scale field + ops systems<br>Reporting + diagnostics<br>End-to-end support</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$10k–20k+/mo</p>
+    </div>
   </div>
 
-  <div class="priceTiers">
-    <div class="tier">
-      <h5 class="tierName">Strategy Intensive</h5>
-      <p class="tierPrice">$250</p>
-      <p class="tierMeta">1 hour · Win number · targeting · field plan · next steps</p>
-      <div class="tierCta">
-        <a class="btn" href="#intake">Book via intake</a>
-      </div>
-    </div>
-
-    <div class="tier tier--featured">
-      <div class="tierBadge">Best value</div>
-      <h5 class="tierName">Municipal Retainer</h5>
-      <p class="tierPrice">$3,000–6,000<span style="font-weight:600">/mo</span></p>
-      <p class="tierMeta">Plan + training + reporting cadence</p>
-      <div class="tierCta">
-        <a class="btn" href="#intake">Start intake</a>
-        <a class="btn secondary" href="#payment">Pay invoice</a>
-      </div>
-    </div>
-
-    <div class="tier">
-      <h5 class="tierName">State Legislative</h5>
-      <p class="tierPrice">$5,000–10,000<span style="font-weight:600">/mo</span></p>
-      <p class="tierMeta">Ops buildout · weekly goals · GOTV</p>
-      <div class="tierCta"><a class="btn secondary" href="#intake">Start intake</a></div>
-    </div>
-
-    <div class="tier">
-      <h5 class="tierName">Congressional</h5>
-      <p class="tierPrice">$10,000–20,000+<span style="font-weight:600">/mo</span></p>
-      <p class="tierMeta">Full-scale field + ops systems</p>
-      <div class="tierCta"><a class="btn secondary" href="#intake">Start intake</a></div>
-    </div>
+  <div class="priceCompareNote">
+    Directional estimate only. Final pricing depends on scope, timeline, and deliverables.
   </div>
 </div>
 
-<p class="priceNote">Directional estimate only. Final pricing depends on scope, travel, deliverables, and timeline.</p>
+<div class="priceSingleCta">
+  <a class="btn" href="#intake">Start intake</a>
+</div>
 {% endcapture %}
       {% include card.html class="card--12" icon="i-card" eyebrow="Consulting Pricing" title="Consulting pricing" content=consulting_pricing %}
 
