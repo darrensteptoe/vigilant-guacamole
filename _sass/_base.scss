@@ -89,10 +89,12 @@ a:focus{outline:var(--focus);outline-offset:2px}
 }
 
 .eyebrow{margin:0 0 6px;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
-.cardTitle{margin:0 0 10px;font-size:16px;letter-spacing:-0.01em;display:flex;align-items:center;gap:12px}
-.cardTitle > .icon{width:20px !important;height:20px !important;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;color:var(--icon-muted);line-height:0}
-.cardTitle > .icon > svg{width:20px !important;height:20px !important;display:block;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.cardTitle > .icon > svg *{fill:none;stroke:currentColor}
+.eyebrow{display:flex;align-items:center;gap:10px}
+.eyebrowIcon{width:18px;height:18px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;color:var(--icon-muted);line-height:0}
+.eyebrowIcon svg{width:18px;height:18px;display:block;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cardRule{height:1px;border:0;background:var(--rule);margin:0 0 12px}
+
+.cardTitle{margin:0 0 10px;font-size:16px;letter-spacing:-0.01em;}
 .cardText{margin:0;color:var(--muted)}
 .cardCta{margin:14px 0 0}
 
@@ -159,7 +161,7 @@ a:focus{outline:var(--focus);outline-offset:2px}
 .footerLinks a:hover{text-decoration:underline;color:var(--fg);}
 
 /* Search */
-.searchWrap{display:flex;flex-direction:column;gap:10px;}
+.searchWrap{display:flex;flex-direction:column;gap:10px;;position:relative}
 .searchInput{
   width:100%;
   padding:12px 12px;
@@ -215,3 +217,7 @@ a:focus{outline:var(--focus);outline-offset:2px}
 .help{font-size:12px;color:var(--muted);margin:0;}
 
 .svg-sprite{position:absolute !important;width:0 !important;height:0 !important;overflow:hidden !important;visibility:hidden !important;pointer-events:none !important}
+
+.searchWrapIcon{position:absolute;left:12px;top:12px;width:18px;height:18px;color:var(--icon-muted);pointer-events:none;line-height:0}
+.searchWrapIcon svg{width:18px;height:18px;display:block;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.searchInput{padding-left:40px}
