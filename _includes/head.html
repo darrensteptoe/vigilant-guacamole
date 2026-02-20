@@ -10,5 +10,10 @@
 {% include seo.html %}
 {% include jsonld.html %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}" />
+
+<!-- Calendly (used on /contact/) -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
 {% include csp.html %}
 {% include ga.html %}
