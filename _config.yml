@@ -32,11 +32,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-liquid:
-  error_mode: strict
-  strict_filters: true
-  strict_variables: true
-
 sass:
   sass_dir: _sass
   style: compressed
