@@ -123,3 +123,25 @@ a:focus{outline:var(--focus);outline-offset:2px}
 
 .siteFooter{border-top:1px solid var(--border);margin-top:36px;padding:22px 0}
 .muted{color:var(--muted);margin:0}
+
+
+/* Embeds */
+.embed{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:var(--radius-sm);border:1px solid var(--border);background:rgba(0,0,0,0.03);}
+.embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.embed--fixed{padding-top:0;height:700px;}
+.embed--fixed iframe{position:static;width:100%;height:100%;}
+
+/* Utilities */
+.mt-16{margin-top:16px;}
+.muted{color:var(--muted);}
+
+/* Buttons row */
+.btnRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+
+/* Lists inside cards */
+.list{margin:10px 0 0 18px;padding:0;}
+.list li{margin:6px 0;}
+
+/* Subhead */
+.subhead{font-weight:800;margin:2px 0 10px;letter-spacing:0;}
+.grid--tight{gap:12px;}
