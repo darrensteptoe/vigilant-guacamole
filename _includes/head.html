@@ -1,8 +1,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{% if page.title %}{{ page.title }}{% if site.title and page.title != site.title %} · {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
-{% assign meta_description = page.description | default: site.description | default: site.title %}
-<meta name="description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}" />
+<meta name="description" content="{{ page.description | strip_html | normalize_whitespace | escape }}" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="color-scheme" content="light dark" />
 <link rel="canonical" href="{{ page.url | absolute_url }}" />
