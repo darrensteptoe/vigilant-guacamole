@@ -20,57 +20,80 @@ permalink: /services/
       {% endcapture %}
       {% include card.html class="card--12" icon="i-media" eyebrow="Media" title="Media production services" content=media %}
 
-      {% capture media_pricing %}
-<div class="priceCompare" aria-label="Wedding packages and pricing">
+      {% capture media_wedding %}
+<div class="priceCompare" aria-label="Wedding pricing">
   <div class="priceCompareGrid">
-    <div class="priceCol">
-      <h5 class="priceName">Select</h5>
-      <p class="priceMeta">4–5 hours of photo/video<br>400+ fully edited photos<br>4+ min highlight film<br>60s teaser</p>
-      <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$2,450</p>
-    </div>
 
     <div class="priceCol">
-      <h5 class="priceName">Classic</h5>
-      <p class="priceMeta">6 hours of photo/video<br>500+ fully edited photos<br>6+ min highlight film<br>60s teaser</p>
+      <h5 class="priceName">Bronze</h5>
+      <p class="priceMeta">Up to 6 hours<br>5–7 min highlight film<br>14-day turnaround</p>
       <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$2,900</p>
+      <p class="priceAmount">$2,400</p>
+      
     </div>
-
     <div class="priceCol priceCol--featured">
-      <h5 class="priceName">Luxe</h5>
-      <p class="priceMeta">8 hours of photo/video<br>600+ fully edited photos<br>8+ min highlight film<br>60s teaser</p>
+      <h5 class="priceName">Silver</h5>
+      <p class="priceMeta">Up to 8 hours<br>Full speeches edit<br>6–8 min cinematic film</p>
       <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$3,450</p>
+      <p class="priceAmount">$3,200</p>
       <p class="priceTag">Most popular</p>
     </div>
-
     <div class="priceCol">
-      <h5 class="priceName">Premier</h5>
-      <p class="priceMeta">10 hours of photo/video<br>700+ fully edited photos<br>10+ min highlight film<br>60s teaser</p>
+      <h5 class="priceName">Gold</h5>
+      <p class="priceMeta">Up to 10 hours<br>Multi-cam ceremony<br>Drone + social teaser</p>
       <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$4,000</p>
+      <p class="priceAmount">$4,200</p>
+      
     </div>
-
     <div class="priceCol">
-      <h5 class="priceName">The Ivory</h5>
-      <p class="priceMeta">10 hours photo/video<br>Second photographer (10 hrs)<br>900+ fully edited photos<br>10+ min highlight film<br>60s teaser<br>Drone<br>Engagement session</p>
+      <h5 class="priceName">Platinum</h5>
+      <p class="priceMeta">Up to 12 hours<br>Specialty cameras<br>Ceremony + speeches<br>48-hr teaser<br>7-day delivery</p>
       <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$4,950</p>
+      <p class="priceAmount">$5,200</p>
+      
+    </div>
+    <div class="priceCol">
+      <h5 class="priceName">Additional Hour</h5>
+      <p class="priceMeta">Applies beyond the booked package</p>
+      <div class="priceDivider" aria-hidden="true"></div>
+      <p class="priceAmount">$125</p>
     </div>
   </div>
-
-  <div class="priceCompareNote">
-    All packages include high‑resolution deliverables and a shareable gallery. Travel/tax may apply depending on location.
-  </div>
+  <div class="priceCompareNote">Packages can be customized. Travel/tax may apply depending on location.</div>
 </div>
+      {% endcapture %}
+      {% include card.html class="card--12" icon="i-card" eyebrow="Wedding Pricing" title="Wedding films" content=media_wedding %}
 
-<div class="priceSingleCta">
-  <a class="btn" href="#intake">Start intake</a>
-  <a class="btn secondary" href="#payment">Payment</a>
-</div>
-{% endcapture %}
-      {% include card.html class="card--12" icon="i-card" eyebrow="Media Pricing" title="Media pricing" content=media_pricing %}
+      {% capture media_pricing %}
+<div class="pricingSection">
+        <div class="subhead">Event &amp; Promotional</div>
+        <div class="grid grid--tight pricingGrid">
+          {% include card.html class="card--6" title="Half Day — $600" text="Up to 4 hours · 60–90 sec highlight" %}
+          {% include card.html class="card--6" title="Full Day — $1,000" text="Up to 8 hours · 2–3 min highlight" %}
+        </div>
+      </div>
+
+<div class="pricingSection">
+        <div class="subhead">Corporate &amp; Small Business</div>
+        <div class="grid grid--tight pricingGrid">
+          {% include card.html class="card--6" title="Brand Promo — $1,200" text="Interview + b-roll · 2–3 min film · Social cut" %}
+          {% include card.html class="card--6" title="Executive Interview — $850" text="Up to 2 hours · 1–2 min polished edit" %}
+          {% include card.html class="card--6" title="Monthly Content — from $2,500" text="1 filming day · 3–5 edited videos" %}
+          {% include card.html class="card--6" title="Custom Package — quote" text="Multi-day / multi-location / recurring" %}
+        </div>
+      </div>
+
+<div class="pricingSection">
+        <div class="subhead">Documentary &amp; Editing</div>
+        <div class="grid grid--tight pricingGrid">
+          {% include card.html class="card--6" title="Editing — $85/hr" text="5-hour minimum per project phase" %}
+          {% include card.html class="card--6" title="Full Documentary Support — quote" text="Development → post support tailored to scope" %}
+        </div>
+      </div>
+
+<p class="cardText mt-16">Directional estimate only. Final pricing depends on scope, travel, deliverables, and timeline.</p>
+      {% endcapture %}
+      {% include card.html class="card--12" icon="i-card" eyebrow="Media Pricing" title="Other video services" content=media_pricing %}
 
       {% capture youtube %}
 {% include embed.html src="https://www.youtube.com/embed/ycHys4e6s3Q" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" %}
@@ -92,48 +115,19 @@ permalink: /services/
       {% include card.html class="card--12" icon="i-ballot" eyebrow="Consulting" title="Political consulting" content=consult %}
 
       {% capture consulting_pricing %}
-<div class="priceCompare" aria-label="Consulting retainers and pricing">
-  <div class="priceCompareGrid" style="grid-template-columns:repeat(4,minmax(0,1fr))">
-    <div class="priceCol">
-      <h5 class="priceName">Strategy intensive</h5>
-      <p class="priceMeta">1 hour<br>Win number + targeting<br>Action plan + next steps</p>
-      <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$250</p>
-    </div>
+<div class="pricingSection">
+        <div class="subhead">Political Consulting</div>
+        <div class="grid grid--tight pricingGrid">
+          {% include card.html class="card--6" title="Strategy Intensive (1 Hour) — $250" text="Win number, targeting, field plan, next steps" %}
+          {% include card.html class="card--6" title="Municipal Retainer — $3,000–6,000 / month" text="Plan + training + reporting cadence" %}
+          {% include card.html class="card--6" title="State Legislative Retainer — $5,000–10,000 / month" text="Ops buildout + weekly goals + GOTV" %}
+          {% include card.html class="card--6" title="Congressional Retainer — $10,000–20,000+ / month" text="Full-scale field + ops systems" %}
+        </div>
+      </div>
 
-    <div class="priceCol priceCol--featured">
-      <h5 class="priceName">Municipal</h5>
-      <p class="priceMeta">Weekly cadence<br>Plan + training + reporting<br>Adjustments as data comes in</p>
-      <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$3k–6k/mo</p>
-      <p class="priceTag">Best value</p>
-    </div>
-
-    <div class="priceCol">
-      <h5 class="priceName">State legislative</h5>
-      <p class="priceMeta">Ops buildout<br>Weekly goals<br>GOTV execution support</p>
-      <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$5k–10k/mo</p>
-    </div>
-
-    <div class="priceCol">
-      <h5 class="priceName">Congressional</h5>
-      <p class="priceMeta">Full-scale field + ops systems<br>Reporting + diagnostics<br>End-to-end support</p>
-      <div class="priceDivider" aria-hidden="true"></div>
-      <p class="priceAmount">$10k–20k+/mo</p>
-    </div>
-  </div>
-
-  <div class="priceCompareNote">
-    Directional estimate only. Final pricing depends on scope, timeline, and deliverables.
-  </div>
-</div>
-
-<div class="priceSingleCta">
-  <a class="btn" href="#intake">Start intake</a>
-</div>
-{% endcapture %}
-      {% include card.html class="card--12" icon="i-card" eyebrow="Consulting Pricing" title="Consulting pricing" content=consulting_pricing %}
+<p class="cardText mt-16">Directional estimate only. Final pricing depends on scope, travel, deliverables, and timeline.</p>
+      {% endcapture %}
+      {% include card.html class="card--12" icon="i-card" eyebrow="Consulting Pricing" title="Packages and rates" content=consulting_pricing %}
 
       {% capture intake %}
 <p class="cardText">Use this form to describe what you need. I’ll follow up with next steps and a clear scope.</p>
