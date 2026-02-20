@@ -1,0 +1,10 @@
+<figure class="media{% if include.class %} {{ include.class }}{% endif %}">
+  {% if include.href %}
+    <a href="{{ include.href | relative_url }}">
+      <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: '' | escape }}" loading="lazy">
+    </a>
+  {% else %}
+    <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: '' | escape }}" loading="lazy">
+  {% endif %}
+  {% if include.caption %}<figcaption class="caption">{{ include.caption }}</figcaption>{% endif %}
+</figure>

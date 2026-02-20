@@ -1,0 +1,4 @@
+<div class="callout{% if include.variant %} callout--{{ include.variant }}{% endif %}">
+  {% if include.title %}<p class="calloutTitle">{{ include.title }}</p>{% endif %}
+  <div class="calloutBody">{{ include.content }}</div>
+</div>

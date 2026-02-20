@@ -1,0 +1,9 @@
+<div class="card{% if include.class %} {{ include.class }}{% endif %}">
+  {% if include.eyebrow %}<p class="eyebrow">{{ include.eyebrow }}</p>{% endif %}
+  {% if include.title %}<h3 class="cardTitle">{{ include.title }}</h3>{% endif %}
+  {% if include.text %}<p class="cardText">{{ include.text }}</p>{% endif %}
+  {% if include.content %}{{ include.content }}{% endif %}
+  {% if include.href and include.cta %}
+    <p class="cardCta"><a class="btn" href="{{ include.href | relative_url }}">{{ include.cta }}</a></p>
+  {% endif %}
+</div>
