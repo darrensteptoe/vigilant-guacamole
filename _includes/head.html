@@ -1,7 +1,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{% if page.title %}{{ page.title }}{% if site.title and page.title != site.title %} · {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
-{% assign meta_description = page.description | default: site.description | default: site.title %}
+<title>{% if page['title'] %}{{ page['title'] }}{% if site.title and page['title'] != site.title %} · {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
+{% assign meta_description = page['description'] | default: site.description | default: site.title %}
 <meta name="description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}" />
 <meta name="author" content="{{ site.author | strip_html | normalize_whitespace | escape }}" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
