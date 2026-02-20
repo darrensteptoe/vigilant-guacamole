@@ -4,7 +4,7 @@
 <head>
   {% include head.html author=author %}
 </head>
-<body class="{{ page['body_class'] | default: 'page-generic' }}">
+<body class="{{ page['body_class'] | default: 'page-generic' }}" data-baseurl="{{ site.baseurl | default: '' }}">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <main class="wrap" id="main">
@@ -33,9 +33,16 @@
 
     <hr class="sectionRule" aria-hidden="true">
 
-    <section class="panel" aria-label="{% if page['title'] %}{{ page['title'] }}{% else %}Content{% endif %}">
-      {{ content }}
-    </section>
+    {% if page.title and page.title != site.title and page.show_page_header != false %}
+      <header class="header" aria-label="Page header">
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.description %}<p class="sub">{{ page.description }}</p>{% endif %}
+      </header>
+
+      <hr class="sectionRule" aria-hidden="true">
+    {% endif %}
+
+    {{ content }}
 
     {% include site_footer.html %}
   </main>
