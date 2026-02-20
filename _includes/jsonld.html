@@ -1,21 +1,24 @@
+{% assign _title = page['title'] | default: site.title | default: "" %}
+{% assign _description = page['description'] | default: site.description | default: "" %}
+{% assign _image = page['image'] | default: site.image | default: "" %}
 {% assign _author = page['author'] | default: site.author | default: "" %}
-{% assign _desc = page.description | default: site.description | default: "" %}
-{% assign _author = page.author | default: site.author | default: "" %}
-{% assign _img = page.image | default: site.image %}
-{% assign _img_url = nil %}
-{% if _img %}
-  {% assign _img_url = _img | absolute_url %}
-{% endif %}
+{% assign _url = page.url | absolute_url %}
+{% assign _date = page['date'] | default: nil %}
+{% assign _modified = page['modified_date'] | default: nil %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "{% if page.layout == 'post' %}BlogPosting{% elsif page.layout == 'paper' %}ScholarlyArticle{% else %}WebPage{% endif %}",
   "headline": {{ _title | jsonify }},
-  "url": {{ page.url | absolute_url | jsonify }}{% if _desc != "" %},
-  "description": {{ _desc | jsonify }}{% endif %}{% if _img_url %},
-  "image": {{ _img_url | jsonify }}{% endif %}{% if page.date %},
-  "datePublished": {{ page.date | date_to_xmlschema | jsonify }}{% endif %}{% if page.modified_date %},
-  "dateModified": {{ page.modified_date | date_to_xmlschema | jsonify }}{% endif %}{% if _author != "" %},
-  "author": { "@type": "Person", "name": {{ _author | jsonify }} }{% endif %}
+  "description": {{ _description | jsonify }},
+  "url": {{ _url | jsonify }}{% if _image and _image != "" %},
+  "image": {{ _image | absolute_url | jsonify }}{% endif %}{% if _author and _author != "" %},
+  "author": {
+    "@type": "Person",
+    "name": {{ _author | jsonify }}
+  }{% endif %}{% if _date %},
+  "datePublished": "{{ _date | date_to_xmlschema }}"{% endif %}{% if _modified %},
+  "dateModified": "{{ _modified | date_to_xmlschema }}"{% endif %}
 }
 </script>
