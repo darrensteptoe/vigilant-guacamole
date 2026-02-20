@@ -41,6 +41,9 @@ url: https://darrensteptoe.com
 baseurl: ""
 
 exclude:
+  - vendor
+  - vendor/bundle
+  - .bundle
   - node_modules
   - tools
   - docs
@@ -48,8 +51,10 @@ exclude:
   - package-lock.json
   - yarn.lock
   - pnpm-lock.yaml
+  - Gemfile
+  - Gemfile.lock
   - README.md
   - CNAME
   - .ruby-version
-
+  
 image: /assets/img/scoreboard.jpeg
