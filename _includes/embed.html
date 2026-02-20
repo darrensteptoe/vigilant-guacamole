@@ -1,0 +1,10 @@
+<div class="embed{% if include.class %} {{ include.class }}{% endif %}"{% if include.style %} style="{{ include.style }}"{% endif %}>
+  <iframe
+    src="{{ include.src }}"
+    title="{{ include.title | default: 'Embedded content' | escape }}"
+    loading="lazy"
+    {% if include.allow %}allow="{{ include.allow }}"{% endif %}
+    {% if include.referrerpolicy %}referrerpolicy="{{ include.referrerpolicy }}"{% endif %}
+    {% if include.allowfullscreen != false %}allowfullscreen{% endif %}
+  ></iframe>
+</div>
