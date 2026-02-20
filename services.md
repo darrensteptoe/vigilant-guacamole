@@ -40,14 +40,14 @@ permalink: /services/
     </div>
     <div class="priceCol">
       <h5 class="priceName">Gold</h5>
-      <p class="priceMeta">Additional cameraperson<br>Multi-cam ceremony<br>Drone + social teaser</p>
+      <p class="priceMeta">+1 Videographer<br>Multi-cam ceremony<br>Drone + social teaser</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$4,200</p>
       
     </div>
     <div class="priceCol">
       <h5 class="priceName">Platinum</h5>
-      <p class="priceMeta">Documentary + highlight<br>Specialty cameras<br>Ceremony + speeches</p>
+      <p class="priceMeta">Documentary film<br>Specialty cameras<br>Ceremony + speeches</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$5,200</p>
       
