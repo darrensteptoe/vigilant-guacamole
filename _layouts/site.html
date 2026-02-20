@@ -2,7 +2,7 @@
 {% assign author = site.author %}
 <html lang="en">
 <head>
-  {% include head.html %}
+  {% include head.html author=author %}
 </head>
 <body class="{{ page['body_class'] | default: 'page-generic' }}">
   <a class="skip-link" href="#main">Skip to content</a>
