@@ -1,4 +1,4 @@
-{% assign _title = page.title | default: site.title %}
+{% assign _author = page['author'] | default: site.author | default: "" %}
 {% assign _desc = page.description | default: site.description | default: "" %}
 {% assign _author = page.author | default: site.author | default: "" %}
 {% assign _img = page.image | default: site.image %}
