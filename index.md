@@ -14,5 +14,5 @@ I’m Darren Steptoe. I build structured, practical work where accuracy matters,
 ---
 
 <div class="featured-image-container">
-  <img src="{{ '/assets/scoreboard.jpeg' | relative_url }}" alt="Darren Steptoe, PAVE Coalition, Senate President Don Harmon" />
+  <img src="{{ '/assets/img/scoreboard.jpeg' | relative_url }}" alt="Darren Steptoe, PAVE Coalition, Senate President Don Harmon" />
 </div>
