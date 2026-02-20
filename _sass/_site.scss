@@ -2,6 +2,7 @@
   --bg:#f5f5f5;
   --fg:#111;
   --muted:#444;
+  --icon-muted: rgba(17,17,17,.55);
   --rule:#d0d0d0;
   --panel:#fff;
   --link:#0000ee;
@@ -235,6 +236,7 @@ button:active{transform:translateY(1px)}
     --bg:#0f0f10;
     --fg:#f3f3f3;
     --muted:#b6b6b6;
+    --icon-muted: rgba(240,246,252,.65);
     --rule:#2a2a2a;
     --panel:#121214;
     --link:#8ab4f8;
