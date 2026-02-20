@@ -1,6 +1,8 @@
 title: Darren Steptoe
 description: "Strategy • Systems • Story"
 
+url: ""
+baseurl: ""
 
 collections:
   papers:
@@ -11,8 +13,8 @@ defaults:
   - scope:
       path: ""
     values:
+      layout: site
       description: "Strategy • Systems • Story"
-      image: /assets/img/scoreboard.jpeg
 
   - scope:
       path: ""
@@ -37,8 +39,6 @@ sass:
   style: compressed
 
 author: Darren Steptoe
-url: https://darrensteptoe.com
-baseurl: ""
 
 exclude:
   - vendor
@@ -56,5 +56,3 @@ exclude:
   - README.md
   - CNAME
   - .ruby-version
-  
-image: /assets/img/scoreboard.jpeg

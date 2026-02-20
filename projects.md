@@ -1,31 +1,21 @@
 ---
-layout: site
-title: "Projects & Research"
-description: "Documentary development and research projects."
+title: Projects & Research
+description: "Placeholder projects page."
 permalink: /projects/
-nav_order: 3
-
 ---
-<section class="panel" aria-label="Documentary project 1">
-      <h2 class="h2">Documentary Project #1 (In Development)</h2>
-      <p>
-        A feature-length documentary project centered on firsthand accounts during the American Civil War. The film draws from personal diaries and primary documents to reconstruct daily life inside a city under sustained siege.
-<br /><br />
-• Status: Research & Transcription<br />
-• Format: Feature-length documentary<br />
-• Source Material: Archival diaries, correspondence, military records
-      </p>
-      <p>
-        When complete, I plan to return my analysis and transcription back to the library that currently houses the material.
-      </p>
-      <p><em>More details coming soon.</em></p>
-    </section>
 
-    <section class="panel" aria-label="Documentary project 2">
-      <h2 class="h2">Documentary Project #2 (In Development)</h2>
-      <p>
-        A second documentary project currently in early development. This one is still in the “wide research” stage:
-        collecting sources, mapping themes, and pressure-testing the structure before narrowing down the core story.
-      </p>
-      <p><em>More details coming soon.</em></p>
-    </section>
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      {% capture c1 %}
+      <p class="cardText">Create one card per project. Keep the summary short; link out to a detail page.</p>
+      {% endcapture %}
+      {% include card.html class="card--8" eyebrow="Projects" title="Project list" content=c1 %}
+
+      {% capture c2 %}
+      <p class="cardText">Use this card for filters, tags, or a “currently building” list later.</p>
+      {% endcapture %}
+      {% include card.html class="card--4" eyebrow="Notes" title="Sidebar" content=c2 %}
+    </div>
+  </div>
+</section>

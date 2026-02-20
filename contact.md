@@ -1,42 +1,21 @@
 ---
-layout: site
-title: "Contact"
-description: "Contact details, office hours, and scheduling."
+title: Contact
+description: "Placeholder contact page."
 permalink: /contact/
-nav_order: 6
-
 ---
-<section class="panel" aria-label="Contact Email">
-      <h2 class="h2" id="email">Email</h2>
-      <p>
-        <a href="mailto:hello@darrensteptoe.com" onclick="trackEvent('contact_email_click');">hello@darrensteptoe.com</a>
-      </p>
-    </section>
 
-<section class="panel" aria-label="Office Hours">
-      <h2 class="h2" id="hours">Office Hours</h2>
-      <p class="muted small">Monday–Friday • 9:00am–5:00pm</p>
-    </section>
+<section class="section">
+  <div class="container">
+    <div class="grid">
+      {% capture c1 %}
+      <p class="cardText">Add your form, email, and scheduling embed here. Each is its own box.</p>
+      {% endcapture %}
+      {% include card.html class="card--6" eyebrow="Contact" title="Contact box" content=c1 %}
 
-<section class="panel" aria-label="Mailing Address">
-      <h2 class="h2" id="mailing-address">Mailing Address</h2>
-      <p class="muted small">[Add mailing address here]</p>
-    </section>
-
-<section class="panel" aria-label="Schedule">
-      <div class="panelHeaderRow">
-        <h2 class="h2">Schedule</h2>
-        <img src="{{ '/assets/img/Calendly_logo.png' | relative_url }}" alt="Calendly" class="panelLogoHorizontal" />
-      </div>
-
-      <p class="muted small">
-        Prefer a new tab? <a href="https://calendly.com/me--ujg" target="_blank" rel="noopener" onclick="trackEvent('schedule_click');">Open Calendly ↗</a>
-      </p>
-
-      <div
-        class="calendly-inline-widget calendly-frame"
-        data-url="https://calendly.com/me--ujg"
-        style="min-width:320px;height:720px;"
-      ></div>
-
-      </section>
+      {% capture c2 %}
+      <p class="cardText">Placeholder for Calendly embed (we’ll add once the layout is locked).</p>
+      {% endcapture %}
+      {% include card.html class="card--6" eyebrow="Schedule" title="Scheduling box" content=c2 %}
+    </div>
+  </div>
+</section>
