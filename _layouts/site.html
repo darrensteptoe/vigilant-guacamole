@@ -1,53 +1,26 @@
 <!doctype html>
-{% assign author = site.author %}
 <html lang="en">
 <head>
-  {% include head.html author=author %}
+  {% include head.html %}
 </head>
-<body class="{{ page['body_class'] | default: 'page-generic' }}" data-baseurl="{{ site.baseurl | default: '' }}">
-  <a class="skip-link" href="#main">Skip to content</a>
+<body class="page" data-baseurl="{{ site.baseurl }}">
+  <a class="skip" href="#main">Skip to content</a>
+  {% include nav.html %}
 
-  <main class="wrap" id="main">
-    <header class="header">
-      <h1 class="title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-      <p class="sub">Strategy • Systems • Story</p>
+  <main id="main" class="main">
+    <header class="pageHeader">
+      <div class="container">
+        <h1 class="pageTitle">{{ page.title | escape }}</h1>
+        {% if page.description %}
+          <p class="pageDescription">{{ page.description }}</p>
+        {% endif %}
+      </div>
     </header>
 
-    {% include site_nav_panel.html %}
-
-    <hr class="sectionRule" aria-hidden="true">
-
-    <section class="panel" aria-label="Site search">
-      <div class="searchRow">
-        <label class="srOnly" for="q">Search</label>
-        <input id="q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search the site..." />
-        <button id="clear" type="button">Clear</button>
-      </div>
-
-      <div id="resultsMeta" class="resultsMeta hidden">
-        <strong><span id="count">0</span></strong> result(s)
-      </div>
-
-      <ul id="results" class="results hidden" aria-live="polite"></ul>
-    </section>
-
-    <hr class="sectionRule" aria-hidden="true">
-
-    {% if page.title and page.title != site.title and page.show_page_header != false %}
-      <header class="header" aria-label="Page header">
-        <h1 class="title">{{ page.title }}</h1>
-        {% if page.description %}<p class="sub">{{ page.description }}</p>{% endif %}
-      </header>
-
-      <hr class="sectionRule" aria-hidden="true">
-    {% endif %}
-
     {{ content }}
-
-    {% include site_footer.html %}
   </main>
 
-  <script src="{{ '/assets/js/search.js' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}" defer></script>
-  <script src="{{ '/assets/js/script.js' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}" defer></script>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 </body>
 </html>
