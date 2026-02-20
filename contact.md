@@ -11,7 +11,7 @@ permalink: /contact/
       {% capture c1 %}
       <p class="cardText"><strong>Email</strong><br><a href="mailto:hello@darrensteptoe.com">hello@darrensteptoe.com</a></p>
       <p class="cardText"><strong>Office Hours</strong><br>Monday–Friday • 9:00am–5:00pm</p>
-      <p class="cardText"><strong>Mailing Address</strong><br>[Add mailing address here]</p>
+      <p class="cardText"><strong>Mailing Address</strong><br>Chicago, IL</p>
       {% endcapture %}
       {% include card.html class="card--12" eyebrow="Contact" title="Details" content=c1 %}
 
