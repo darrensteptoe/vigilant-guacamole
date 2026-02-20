@@ -17,7 +17,7 @@ permalink: /contact/
 
       {% capture cal %}
       <p class="cardText">Prefer a new tab? <a href="#" target="_blank" rel="noopener noreferrer">Open Calendly ↗</a></p>
-      {% include embed.html class="embed--fixed" src="https://calendly.com/" title="Calendly scheduling" %}
+      {% include embed.html class="embed--fixed" src="https://calendly.com/me--ujg" title="Calendly scheduling" %}
       {% endcapture %}
       {% include card.html class="card--12" eyebrow="Schedule" title="Book time" content=cal %}
 
