@@ -1,9 +1,10 @@
 <!doctype html>
+{% assign author = site.author %}
 <html lang="en">
 <head>
   {% include head.html %}
 </head>
-<body class="{{ page.body_class | default: 'page-generic' }}">
+<body class="{{ page['body_class'] | default: 'page-generic' }}">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <main class="wrap" id="main">
@@ -32,7 +33,7 @@
 
     <hr class="sectionRule" aria-hidden="true">
 
-    <section class="panel" aria-label="{% if page.title %}{{ page.title }}{% else %}Content{% endif %}">
+    <section class="panel" aria-label="{% if page['title'] %}{{ page['title'] }}{% else %}Content{% endif %}">
       {{ content }}
     </section>
 
