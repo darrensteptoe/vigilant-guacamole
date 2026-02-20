@@ -47,7 +47,7 @@ permalink: /services/
     </div>
     <div class="priceCol">
       <h5 class="priceName">Platinum</h5>
-      <p class="priceMeta">Up to 12 hours<br>Specialty cameras<br>Ceremony + speeches<br>48-hr teaser<br>7-day delivery</p>
+      <p class="priceMeta">Documentary + highlight<br>Specialty cameras<br>Ceremony + speeches</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$5,200</p>
       
