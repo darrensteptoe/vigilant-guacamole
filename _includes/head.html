@@ -3,8 +3,7 @@
 <title>{% if page.title %}{{ page.title }}{% if site.title and page.title != site.title %} · {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
 {% assign meta_description = page.description | default: site.description | default: site.title %}
 <meta name="description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}" />
-{% assign meta_author = page.author | default: site.author | default: site.title %}
-<meta name="author" content="{{ meta_author | strip_html | normalize_whitespace | escape }}" />
+<meta name="author" content="{{ site.author | strip_html | normalize_whitespace | escape }}" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta name="color-scheme" content="light dark" />
 <link rel="canonical" href="{{ page.url | absolute_url }}" />
