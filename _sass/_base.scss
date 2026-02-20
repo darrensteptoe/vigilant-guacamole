@@ -224,97 +224,17 @@ a:focus{outline:var(--focus);outline-offset:2px}
 .searchInput{padding-left:40px}
 
 .cardRule{height:1px;border:0;background:var(--rule);margin:10px -16px 14px}
-
-/* Pricing (editorial compare) */
-.priceCompare{
-  margin-top: 14px;
-  border: 1px solid var(--rule);
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--panel);
-}
-
-.priceCompareGrid{
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0,1fr));
-}
-
-@media (max-width: 860px){
-  .priceCompare{
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .priceCompareGrid{
-    min-width: 860px;
-  }
-}
-
-.priceCol{
-  padding: 18px 16px 16px;
-  border-right: 1px solid var(--rule);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  gap: 10px;
-}
-
-.priceCol:last-child{ border-right: 0; }
-
-.priceName{
-  margin: 0;
-  font-size: 18px;
-  letter-spacing: -0.01em;
-}
-
-.priceMeta{
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.priceDivider{
-  width: 1px;
-  height: 54px;
-  background: var(--rule);
-  margin: 6px 0;
-}
-
-.priceAmount{
-  margin: 0;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: -0.01em;
-}
-
-.priceTag{
-  margin: 0;
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.priceCol--featured{
-  background: rgba(209,36,47,.04);
-}
-
-@media (prefers-color-scheme:dark){
-  .priceCol--featured{ background: rgba(209,36,47,.10); }
-}
-
-.priceCompareNote{
-  padding: 14px 16px;
-  border-top: 1px solid var(--rule);
-  color: var(--muted);
-  font-size: 13px;
-  text-align:center;
-}
-
-.priceSingleCta{
-  margin-top: 14px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
+/* Wedding pricing (compare) */
+.priceCompare{margin-top:14px;border:1px solid var(--rule);border-radius:14px;overflow:hidden;background:var(--panel)}
+.priceCompareGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:860px){.priceCompare{overflow-x:auto;-webkit-overflow-scrolling:touch}.priceCompareGrid{min-width:860px}}
+.priceCol{padding:18px 16px 16px;border-right:1px solid var(--rule);display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.priceCol:last-child{border-right:0}
+.priceName{margin:0;font-size:18px;letter-spacing:-0.01em}
+.priceMeta{margin:0;color:var(--muted);font-size:13px;line-height:1.4}
+.priceDivider{width:1px;height:64px;background:var(--rule);margin:10px 0}
+.priceAmount{margin:0;font-weight:800;font-size:20px;letter-spacing:-0.01em}
+.priceTag{margin:0;font-size:12px;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase}
+.priceCol--featured{background:rgba(209,36,47,.04)}
+@media (prefers-color-scheme:dark){.priceCol--featured{background:rgba(209,36,47,.10)}}
+.priceCompareNote{padding:14px 16px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px;text-align:center}
