@@ -1,19 +1,6 @@
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{% if page['title'] %}{{ page['title'] }}{% if site.title and page['title'] != site.title %} · {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
-{% assign meta_description = page['description'] | default: site.description | default: site.title %}
-<meta name="description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}" />
-<meta name="author" content="{{ site.author | strip_html | normalize_whitespace | escape }}" />
-<meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta name="color-scheme" content="light dark" />
-<link rel="canonical" href="{{ page.url | absolute_url }}" />
-{% include seo.html %}
-{% include jsonld.html %}
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}" />
-
-<!-- Calendly (used on /contact/) -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-{% include csp.html %}
-{% include ga.html %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines | escape }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
