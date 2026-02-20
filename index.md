@@ -13,12 +13,13 @@ description: "Strategy • Systems • Story"
 
       {% capture search %}
       <div class="searchWrap" data-search>
+        <span class="searchWrapIcon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-search"></use></svg></span>
         <input class="searchInput" type="search" placeholder="Search this site…" aria-label="Search">
         <p class="searchStatus muted">Loading…</p>
         <div class="searchResults" role="list"></div>
       </div>
       {% endcapture %}
-      {% include card.html class="card--8" eyebrow="Search" title="Find pages fast" content=search %}
+      {% include card.html class="card--8" icon="i-search" eyebrow="Search" title="Find pages fast" content=search %}
 
       {% capture photo %}
       {% include media.html class="media--square" src="/assets/img/EA15915B-E56C-4FB3-B89B-085E5E740523.png" alt="Photo placeholder" %}

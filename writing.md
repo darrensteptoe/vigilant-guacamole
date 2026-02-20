@@ -29,7 +29,7 @@ permalink: /writing/
       <p class="cardText"><em>“Bravo! Excellent read—extremely relatable, without being emotionally heavy.”</em><br><span class="muted">— Harmony</span></p>
       <p class="cardText"><em>“You are a very good writer. I’m impressed by how effective your sentences are—enough words to make an interesting point, but not overly flowery.”</em><br><span class="muted">— Griffith</span></p>
       {% endcapture %}
-      {% include card.html class="card--12" eyebrow="Book" title="When Good Intentions Fail" content=book %}
+      {% include card.html class="card--12" icon="i-book" eyebrow="Book" title="When Good Intentions Fail" content=book %}
 
     </div>
   </div>
