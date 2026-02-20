@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: site
 title: "Darren Steptoe"
 description: "Personal website and directory for Darren Steptoe."
 permalink: /
