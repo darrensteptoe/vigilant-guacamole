@@ -16,7 +16,7 @@ permalink: /writing/
       <div class="subhead">Back cover</div>
       <p class="cardText">Values-driven institutions often look humane on the surface: careful language, collaborative norms, and a shared sense of mission. But when roles, authority, and decision-making stay unfinished, responsibility doesn’t disappear.</p>
       <p class="cardText">It relocates into ambiguity, informal expectations, and the people most willing to carry the load. Over time, “being reliable” becomes a job requirement. Exhaustion becomes normal. And the system keeps functioning precisely because someone keeps compensating.</p>
-      <p class="cardText"><strong>When Good Intentions Fail</strong> names the pattern clearly—without drama—and gives readers a way to recognize where the burden went, why it landed there, and how to stop mistaking personal strain for personal failure.</p>
+      <p class="cardText"><strong>When Good Intentions Fail</strong> names the pattern clearly and gives readers a way to recognize where the burden went, why it landed there, and how to stop mistaking personal strain for personal failure.</p>
 
       <div class="rule"></div>
       <div class="subhead">Excerpt</div>
