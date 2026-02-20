@@ -40,7 +40,7 @@ permalink: /services/
     </div>
     <div class="priceCol">
       <h5 class="priceName">Gold</h5>
-      <p class="priceMeta">Up to 10 hours<br>Multi-cam ceremony<br>Drone + social teaser</p>
+      <p class="priceMeta">Addition cameraperson<br>Multi-cam ceremony<br>Drone + social teaser</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$4,200</p>
       
@@ -54,7 +54,7 @@ permalink: /services/
     </div>
     <div class="priceCol">
       <h5 class="priceName">Additional Hour</h5>
-      <p class="priceMeta">Applies beyond the booked package</p>
+      <p class="priceMeta">Applies beyond the booked package (non-negotiable)</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$125</p>
     </div>
