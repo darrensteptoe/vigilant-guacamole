@@ -6,12 +6,6 @@ permalink: /services/
 nav_order: 5
 
 ---
-
-<header class="header">
-      <h1 class="title">Services</h1>
-      <p class="sub">Media production • Consulting</p>
-    </header>
-
 <section class="panel" aria-label="Media Production Services">
       <h2 class="h2">Media Production Services</h2>
 

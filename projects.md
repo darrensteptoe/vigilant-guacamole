@@ -6,14 +6,6 @@ permalink: /projects/
 nav_order: 3
 
 ---
-
-<header class="header">
-      <h1 class="title">Projects &amp; Research</h1>
-      <p class="sub">Development, archives, and long-form work</p>
-    </header>
-
-    <!-- Pages -->
-
 <section class="panel" aria-label="Documentary project 1">
       <h2 class="h2">Documentary Project #1 (In Development)</h2>
       <p>

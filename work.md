@@ -6,12 +6,6 @@ permalink: /work/
 nav_order: 2
 
 ---
-
-<header class="header">
-      <h1 class="title">Work</h1>
-      <p class="sub">Selected projects and experience</p>
-    </header>
-
 <section class="panel sectionHeader">
       <h2 class="h2">Documentary Work</h2>
     </section>

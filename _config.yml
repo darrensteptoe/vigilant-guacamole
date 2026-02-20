@@ -1,6 +1,6 @@
 title: Darren Steptoe
 description: "Strategy • Systems • Story"
-theme: jekyll-theme-minimal
+
 
 collections:
   papers:
@@ -39,5 +39,17 @@ sass:
 author: Darren Steptoe
 url: https://darrensteptoe.com
 baseurl: ""
+
+exclude:
+  - node_modules
+  - tools
+  - docs
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - pnpm-lock.yaml
+  - README.md
+  - CNAME
+  - .ruby-version
 
 image: /assets/img/scoreboard.jpeg

@@ -6,14 +6,6 @@ permalink: /writing/
 nav_order: 4
 
 ---
-
-<header class="header">
-      <h1 class="title">Writing</h1>
-      <p class="sub">Forthcoming work and excerpts</p>
-    </header>
-
-    <!-- Pages -->
-
 <!-- Book -->
     <section class="panel bookGroup" aria-label="When Good Intentions Fail">
       <div class="bookGroupHead">

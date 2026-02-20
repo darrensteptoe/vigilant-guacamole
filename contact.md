@@ -6,12 +6,6 @@ permalink: /contact/
 nav_order: 6
 
 ---
-
-<header class="header">
-      <h1 class="title">Contact</h1>
-      <p class="sub">Email • Office hours • Scheduling</p>
-    </header>
-
 <section class="panel" aria-label="Contact Email">
       <h2 class="h2" id="email">Email</h2>
       <p>
@@ -32,7 +26,7 @@ nav_order: 6
 <section class="panel" aria-label="Schedule">
       <div class="panelHeaderRow">
         <h2 class="h2">Schedule</h2>
-        <img src="./assets/Calendly_logo.png" alt="Calendly" class="panelLogoHorizontal" />
+        <img src="{{ '/assets/img/Calendly_logo.png' | relative_url }}" alt="Calendly" class="panelLogoHorizontal" />
       </div>
 
       <p class="muted small">
