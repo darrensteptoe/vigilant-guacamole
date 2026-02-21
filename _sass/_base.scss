@@ -53,14 +53,48 @@ a:focus{outline:var(--focus);outline-offset:2px}
 .siteHeader{position:sticky;top:0;z-index:50;background:color-mix(in oklab, var(--bg) 92%, transparent);backdrop-filter:saturate(120%) blur(10px);border-bottom:1px solid var(--border)}
 .siteHeaderInner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px}
 
+/* Generic icon baseline */
 .icon{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-.avatarBtn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--fg);padding:9px;border-radius:10px;border:1px solid var(--border);background:var(--panel)}
+/* Avatar button (left) — symmetric with menu button */
+.avatarBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  padding:0;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:var(--panel);
+  text-decoration:none;
+  color:var(--fg);
+}
 .avatarBtn:hover{box-shadow:var(--shadow)}
-.avatarSlot{width:18px;height:18px;border-radius:6px;background:color-mix(in oklab, var(--bg) 82%, var(--panel))}
+.avatarImg{
+  width:18px;
+  height:18px;
+  border-radius:6px;
+  object-fit:cover;
+  display:block;
+}
 
+/* Menu */
 .menu{position:relative}
-.menuBtn{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;padding:9px;border-radius:10px;border:1px solid var(--border);background:var(--panel);color:var(--fg)}
+.menuBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
+  width:36px;
+  height:36px;
+  padding:0;
+  border-radius:10px;
+  border:1px solid var(--border);
+  background:var(--panel);
+  color:var(--fg);
+}
 .menuBtn:hover{box-shadow:var(--shadow)}
 .menuBtn::-webkit-details-marker{display:none}
 
