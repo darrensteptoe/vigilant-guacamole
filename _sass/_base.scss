@@ -72,11 +72,11 @@ a:focus{outline:var(--focus);outline-offset:2px}
 }
 .avatarBtn:hover{box-shadow:var(--shadow)}
 .avatarImg{
-  width:18px;
-  height:18px;
-  border-radius:6px;
+  width:100%;
+  height:100%;
   object-fit:cover;
   display:block;
+  border-radius:0;
 }
 
 /* Menu */
