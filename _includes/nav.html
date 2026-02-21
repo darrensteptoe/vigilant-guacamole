@@ -1,14 +1,14 @@
 <header class="siteHeader">
   <div class="container siteHeaderInner">
     <a class="homeLink" href="{{ '/' | relative_url }}" aria-label="Home">
-      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"></use></svg>
-      <span class="homeLinkText">Home</span>
+      <svg class="icon icon--home" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"></use></svg>
     </a>
 
     <details class="menu" role="navigation" aria-label="Primary">
       <summary class="menuBtn" aria-label="Open menu">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu"></use></svg>
-        <span class="menuBtnText">Menu</span>
+        <span class="menuBars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
       </summary>
 
       <nav class="menuPanel" aria-label="Site">
