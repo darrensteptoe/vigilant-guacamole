@@ -1,36 +1,17 @@
 (() => {
-  const q = document.getElementById("q");
-  const clearBtn = document.getElementById("clear");
-  const resultsEl = document.getElementById("results");
-  const countEl = document.getElementById("count");
-  const metaEl = document.getElementById("resultsMeta");
-
-  if (!q || !clearBtn || !resultsEl || !countEl || !metaEl) return;
-
-  let pages = [];
-  let filtered = [];
+  // Supports BOTH markup styles:
+  // 1) New card-based search on Home: <div class="searchWrap" data-search> + .searchInput/.searchResults/.searchStatus
+  // 2) Legacy dedicated search page: #q/#clear/#results/#count/#resultsMeta
 
   const escapeHtml = (s) =>
     String(s ?? "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
+      .replace(/\"/g, "&quot;")
       .replace(/'/g, "&#039;");
 
   const normalize = (s) => String(s ?? "").toLowerCase();
-
-  const setVisible = (on) => {
-    metaEl.classList.toggle("hidden", !on);
-    resultsEl.classList.toggle("hidden", !on);
-  };
-
-  const clearResults = () => {
-    filtered = [];
-    resultsEl.innerHTML = "";
-    countEl.textContent = "0";
-    setVisible(false);
-  };
 
   const makeSnippet = (text, terms) => {
     const t = String(text ?? "").replace(/\s+/g, " ").trim();
@@ -65,6 +46,180 @@
     return out;
   };
 
+  // --- New Home markup binding ---
+  const root = document.querySelector("[data-search]");
+  if (root) {
+    const input = root.querySelector(".searchInput");
+    const status = root.querySelector(".searchStatus");
+    const results = root.querySelector(".searchResults");
+
+    if (!input || !results) return;
+
+    let pages = [];
+    let filtered = [];
+
+    const setStatus = (msg) => {
+      if (!status) return;
+      status.textContent = msg || "";
+    };
+
+    const clearResults = () => {
+      filtered = [];
+      results.innerHTML = "";
+    };
+
+    const renderResults = () => {
+      results.innerHTML = filtered
+        .map((r) => {
+          const p = r.p || r;
+          const title = escapeHtml(p.title || p.url);
+          const desc = escapeHtml(p.desc || "");
+          const snippet = highlight(r.snippet || "", r.terms || []);
+          const url = (p.url || "#") + (r.anchor ? `#${encodeURIComponent(r.anchor)}` : "");
+
+          return `
+            <a class="searchResult" href="${url}">
+              <div class="srTitle">${title}</div>
+              ${snippet ? `<div class="srDesc">${snippet}</div>` : desc ? `<div class="srDesc">${desc}</div>` : ""}
+            </a>
+          `;
+        })
+        .join("");
+    };
+
+    const applyFilter = () => {
+      const termRaw = normalize(input.value).trim();
+      const terms = termRaw ? termRaw.split(/\s+/).filter(Boolean) : [];
+
+      if (!terms.length) {
+        clearResults();
+        setStatus("");
+        return;
+      }
+
+      filtered = pages
+        .filter((p) => !p.hidden)
+        .map((p) => {
+          const title = normalize(p.title);
+          const desc = normalize(p.desc);
+          const tags = normalize((p.tags || []).join(" "));
+          const content = normalize(p.content || "");
+
+          let score = 0;
+          const scoreField = (hay, weight) => {
+            let s = 0;
+            for (const t of terms) if (hay.includes(t)) s += weight;
+            return s;
+          };
+
+          score += scoreField(title, 8);
+          score += scoreField(tags, 6);
+          score += scoreField(desc, 3);
+          score += scoreField(content, 1);
+
+          let bestSection = null;
+          let bestSectionScore = 0;
+
+          const secs = Array.isArray(p.sections) ? p.sections : [];
+          for (const s of secs) {
+            const st = normalize(s.title);
+            const sx = normalize(s.text);
+            const secScore = scoreField(st, 6) + scoreField(sx, 2);
+            if (secScore > bestSectionScore) {
+              bestSectionScore = secScore;
+              bestSection = s;
+            }
+          }
+
+          score += bestSectionScore;
+          if (score <= 0) return null;
+
+          const snippetSource = bestSection?.text || p.content || p.desc || "";
+          const snippet = makeSnippet(snippetSource, terms);
+
+          return {
+            p,
+            score,
+            anchor: bestSection?.anchor || "",
+            snippet,
+            terms,
+          };
+        })
+        .filter(Boolean)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 30);
+
+      renderResults();
+      setStatus(`${filtered.length} result${filtered.length === 1 ? "" : "s"}`);
+    };
+
+    const openTopResult = () => {
+      if (!filtered.length) return;
+      const top = filtered[0];
+      const p = top.p || top;
+      const url = (p?.url || "#") + (top.anchor ? `#${encodeURIComponent(top.anchor)}` : "");
+      if (url && url !== "#") window.location.href = url;
+    };
+
+    input.addEventListener("input", applyFilter);
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        openTopResult();
+      }
+      if (e.key === "Escape") {
+        input.value = "";
+        clearResults();
+        setStatus("");
+      }
+    });
+
+    (async () => {
+      setStatus("Loading…");
+      try {
+        // Works on both root and subpath deploys (GitHub Pages / Cloudflare) because relative_url is handled server-side.
+        const res = await fetch((document.body?.dataset?.baseurl || "") + "/assets/data/search-index.json", {
+          cache: "no-store",
+        });
+        const data = await res.json();
+        pages = Array.isArray(data) ? data : [];
+        setStatus("");
+      } catch {
+        pages = [];
+        setStatus("Search index failed to load");
+      }
+
+      clearResults();
+    })();
+
+    return;
+  }
+
+  // --- Legacy binding (kept for compatibility) ---
+  const q = document.getElementById("q");
+  const clearBtn = document.getElementById("clear");
+  const resultsEl = document.getElementById("results");
+  const countEl = document.getElementById("count");
+  const metaEl = document.getElementById("resultsMeta");
+
+  if (!q || !clearBtn || !resultsEl || !countEl || !metaEl) return;
+
+  let pages = [];
+  let filtered = [];
+
+  const setVisible = (on) => {
+    metaEl.classList.toggle("hidden", !on);
+    resultsEl.classList.toggle("hidden", !on);
+  };
+
+  const clearResults = () => {
+    filtered = [];
+    resultsEl.innerHTML = "";
+    countEl.textContent = "0";
+    setVisible(false);
+  };
+
   const renderResults = () => {
     resultsEl.innerHTML = filtered
       .map((r) => {
@@ -79,7 +234,7 @@
           <li>
             <div class="resultTitle"><a href="${url}">${title}</a></div>
             ${sectionTitle ? `<div class="resultMeta">${sectionTitle}</div>` : ""}
-            ${snippet ? `<div class="resultSnippet">${snippet}</div>` : (desc ? `<div class="resultDesc">${desc}</div>` : "")}
+            ${snippet ? `<div class="resultSnippet">${snippet}</div>` : desc ? `<div class="resultDesc">${desc}</div>` : ""}
           </li>
         `;
       })
@@ -173,7 +328,7 @@
       pages = [];
     }
 
-    clearResults(); 
+    clearResults();
   };
 
   q.addEventListener("input", applyFilter);
