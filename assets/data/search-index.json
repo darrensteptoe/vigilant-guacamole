@@ -10,8 +10,13 @@ permalink: /assets/data/search-index.json
 
 {% assign pages = site.pages | where_exp: "p", "p.url != nil" %}
 {% for p in pages %}
+  {% assign u = p.url | default: "" %}
+  {% assign path = p.path | default: "" %}
+  {% assign name = p.name | default: "" %}
   {% unless p.search_exclude %}
-    {% assign docs = docs | push: p %}
+    {% unless u contains '/assets/' or path contains 'assets/' or name contains '.scss' or name contains '.map' %}
+      {% assign docs = docs | push: p %}
+    {% endunless %}
   {% endunless %}
 {% endfor %}
 
