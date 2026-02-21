@@ -24,7 +24,7 @@ permalink: /projects/
       <p class="cardText">A second documentary project currently in early development. This one is still in the “wide research” stage: collecting sources, mapping themes, and pressure-testing the structure before narrowing down the core story.</p>
       <p class="cardText"><em>More details coming soon.</em></p>
       {% endcapture %}
-      {% include card.html class="card--12" eyebrow="In development" title="Documentary Project #2" content=p2 %}
+      {% include card.html icon="i-folder-open" class="card--12" eyebrow="In development" title="Documentary Project #2" content=p2 %}
 
     </div>
   </div>

@@ -8,7 +8,22 @@ permalink: /work/
   <div class="container">
     <div class="grid">
 
+      
+
       {% capture imdb %}
+      <div class="imdbBlock">
+        <div class="imdbTop">
+          <span class="imdbBadge" aria-hidden="true">IMDb</span>
+          <span class="imdbLabel">Film credits</span>
+        </div>
+        <ul class="imdbList">
+          <li><a class="imdbLink" href="https://www.imdb.com/name/nm16173374/" target="_blank" rel="noopener">IMDb profile</a></li>
+        </ul>
+      </div>
+      {% endcapture %}
+      {% include card.html class="card--12 imdbCard" eyebrow=" " title=" " content=imdb %}
+
+{% capture imdb %}
       <p class="cardText">Selected credits and projects across documentary and narrative work.</p>
       {% include button.html href="https://www.imdb.com/name/nm12602714/" label="Open IMDb profile ↗" %}
       {% endcapture %}
@@ -35,7 +50,7 @@ permalink: /work/
       <p class="cardText">The project became a core part of the curriculum, engaging students in fieldwork, media coordination, and a public PhotoVoice showcase focused on homelessness in Tampa.</p>
       <p class="cardText">The project was later documented as a case example in <a href="https://www.bloomsbury.com/us/national-service-and-volunteerism-9780739196946/" target="_blank" rel="noopener noreferrer">National Service and Volunteerism (Bloomsbury) ↗</a>.</p>
       {% endcapture %}
-      {% include card.html class="card--12" icon="i-people" eyebrow="Community work" title="Homeless PhotoVoice Project" content=pv %}
+      {% include card.html class="card--12" icon="i-globe" eyebrow="Community work" title="Homeless PhotoVoice Project" content=pv %}
 
     </div>
   </div>
