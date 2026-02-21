@@ -18,7 +18,9 @@ description: "Strategy • Systems • Story"
       {% include card.html class="card--12" icon="i-search" eyebrow="Search" title="Find pages fast" content=search %}
 
       {% capture about %}
-      <p class="cardText">I’m Darren Steptoe. I build structured, practical work where accuracy matters, from campaign strategy and electoral modeling to media production and long-form research. This site serves as a central hub for my documentaries, books, projects, and ongoing work. If you’re here for professional services, please visit the Services page using the menu above.</p>
+      <p class="cardText">I work in media production, field operations, research, and a few other things that resist easy labels. This site holds all of it.<br><br>
+Some of it is client work. Some of it is what I'm thinking about, building, or just genuinely curious about right now. I'm exploring the world and my own mind, and this is where that lives.<br><br>
+To book services, head to the Services page. For everything else, look around. Laying it all out here wouldn't do it justice anyway.</p>
       {% endcapture %}
       {% include card.html class="card--12" icon="i-user" eyebrow="About" title="Darren Steptoe" content=about %}
 
