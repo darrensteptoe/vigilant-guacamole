@@ -1,7 +1,7 @@
 <header class="siteHeader">
   <div class="container siteHeaderInner">
-    <a class="homeLink" href="{{ '/' | relative_url }}" aria-label="Home">
-      <svg class="icon icon--home" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"></use></svg>
+    <a class="avatarBtn" href="{{ '/' | relative_url }}" aria-label="Home">
+      <span class="avatarSlot" aria-hidden="true"></span>
     </a>
 
     <details class="menu" role="navigation" aria-label="Primary">
@@ -12,6 +12,7 @@
       </summary>
 
       <nav class="menuPanel" aria-label="Site">
+        <a class="navLink" href="{{ '/' | relative_url }}">Home</a>
         <a class="navLink" href="{{ '/services/' | relative_url }}">Services</a>
         <a class="navLink" href="{{ '/writing/' | relative_url }}">Writing</a>
         <a class="navLink" href="{{ '/projects/' | relative_url }}">Projects</a>
