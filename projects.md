@@ -1,5 +1,5 @@
 ---
-title: Projects & Research
+title: Projects
 description: "Development, archives, and long-form work"
 permalink: /projects/
 ---

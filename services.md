@@ -40,21 +40,21 @@ permalink: /services/
     </div>
     <div class="priceCol">
       <h5 class="priceName">Gold</h5>
-      <p class="priceMeta">+1 Videographer<br>Multi-cam ceremony<br>Drone + social teaser</p>
+      <p class="priceMeta">Up to 10 hours<br>Multi-cam ceremony<br>Drone + social teaser</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$4,200</p>
       
     </div>
     <div class="priceCol">
       <h5 class="priceName">Platinum</h5>
-      <p class="priceMeta">Documentary film<br>Specialty cameras<br>Ceremony + speeches</p>
+      <p class="priceMeta">Up to 12 hours<br>Specialty cameras<br>Ceremony + speeches<br>48-hr teaser<br>7-day delivery</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$5,200</p>
       
     </div>
     <div class="priceCol">
       <h5 class="priceName">Additional Hour</h5>
-      <p class="priceMeta">Applies beyond the booked package<br>(non-negotiable)</p>
+      <p class="priceMeta">Applies beyond the booked package</p>
       <div class="priceDivider" aria-hidden="true"></div>
       <p class="priceAmount">$125</p>
     </div>
@@ -62,7 +62,7 @@ permalink: /services/
   <div class="priceCompareNote">Packages can be customized. Travel/tax may apply depending on location.</div>
 </div>
       {% endcapture %}
-      {% include card.html class="card--12" icon="i-card" eyebrow="Wedding Pricing" title="Wedding films →" content=media_wedding %}
+      {% include card.html class="card--12" icon="i-card" icon="i-ring" eyebrow="Wedding Pricing" title="Wedding films" content=media_wedding %}
 
       {% capture media_pricing %}
 <div class="pricingSection">
