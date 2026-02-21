@@ -64,7 +64,7 @@ a:focus{outline:var(--focus);outline-offset:2px}
   width:36px;
   height:36px;
   padding:0;
-  border-radius:12px;
+  border-radius:20px;
   border:1px solid var(--border);
   background:var(--panel);
   overflow:hidden;
@@ -76,7 +76,7 @@ a:focus{outline:var(--focus);outline-offset:2px}
   height:100%;
   object-fit:cover;
   display:block;
-  border-radius:10px;
+  border-radius:20px;
 }
 
 /* Menu */
