@@ -62,7 +62,7 @@ permalink: /services/
   <div class="priceCompareNote">Packages can be customized. Travel/tax may apply depending on location.</div>
 </div>
       {% endcapture %}
-      {% include card.html class="card--12" icon="i-card" icon="i-ring" eyebrow="Wedding Pricing" title="Wedding films" content=media_wedding %}
+      {% include card.html class="card--12" icon="i-ring" icon="i-ring" eyebrow="Wedding Pricing" title="Wedding films" content=media_wedding %}
 
       {% capture media_pricing %}
 <div class="pricingSection">

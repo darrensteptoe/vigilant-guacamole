@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: Projects & Research
 description: "Development, archives, and long-form work"
 permalink: /projects/
 ---
@@ -18,7 +18,7 @@ permalink: /projects/
       <p class="cardText">When complete, I plan to return my analysis and transcription back to the library that currently houses the material.</p>
       <p class="cardText"><em>More details coming soon.</em></p>
       {% endcapture %}
-      {% include card.html class="card--12" eyebrow="In development" title="Documentary Project #1" content=p1 %}
+      {% include card.html icon="i-briefcase" eyebrow="In development" title="Documentary Project #1" content=p1 %}
 
       {% capture p2 %}
       <p class="cardText">A second documentary project currently in early development. This one is still in the “wide research” stage: collecting sources, mapping themes, and pressure-testing the structure before narrowing down the core story.</p>
