@@ -54,10 +54,10 @@ a:focus{outline:var(--focus);outline-offset:2px}
 .siteHeaderInner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 18px}
 
 .icon{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.icon--home{width:16px;height:16px}
 
-.homeLink{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--fg);padding:8px;border-radius:10px}
-.homeLink:hover{background:color-mix(in oklab, var(--panel) 85%, transparent)}
+.avatarBtn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--fg);padding:9px;border-radius:10px;border:1px solid var(--border);background:var(--panel)}
+.avatarBtn:hover{box-shadow:var(--shadow)}
+.avatarSlot{width:18px;height:18px;border-radius:6px;background:color-mix(in oklab, var(--bg) 82%, var(--panel))}
 
 .menu{position:relative}
 .menuBtn{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;padding:9px;border-radius:10px;border:1px solid var(--border);background:var(--panel);color:var(--fg)}
